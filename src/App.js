@@ -8,6 +8,7 @@ import Portfolio from './containers/portfolio';
 import Resume from './containers/resume';
 import Skills from './containers/skills';
 import Navbar from './components/navbar';
+import Help from './containers/help';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Route path='/portfolio' element={<Portfolio/>}/>
       <Route path='/resume' element={<Resume/>}/>
       <Route path='/skills' element={<Skills/>}/>
+      <Route path='/help' element={<Help/>}/>
     </Routes>
     </div>
     </div>

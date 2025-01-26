@@ -34,6 +34,14 @@ const portfolioData = [
         description: "End-to-end test automation framework for SauceDemo using Playwright and TypeScript, implementing Page Object Model pattern.",
         technologies: ["Playwright", "TypeScript", "Page Object Model"],
         link: "https://github.com/TejalLengare/Saucedemo-Playwright-Automation.git"
+    },
+    {
+        id: 5,
+        name: "Portfolio-Website-React",
+        image: "https://placehold.co/800x400/27ae60/ffffff?text=Portfolio+Website",
+        description: "My personal portfolio website built with React, showcasing my professional projects and technical skills. Features a responsive design, smooth animations, and a collection of projects including E-Learning platforms and test automation frameworks.",
+        technologies: ["React", "SCSS", "JavaScript"],
+        link: "https://github.com/TejalLengare/portfolio-website-react.git"
     }
 ];
 

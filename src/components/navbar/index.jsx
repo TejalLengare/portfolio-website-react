@@ -28,6 +28,10 @@ const data=[
     {
         label:'CONTACT',
         to:'/contact'
+    },
+    {
+        label:'HELP',
+        to:'/help'
     }
 ];
 
