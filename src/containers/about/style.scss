@@ -1,0 +1,161 @@
+.about {
+    background-color: #1a1a1a;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+
+    &_content {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        h1 {
+            font-size: 4.5rem;
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        &_text {
+            font-size: 2rem;
+            color: #FFE87C;
+            line-height: 1.8;
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 3.8rem;
+        }
+
+        &_cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            padding: 1rem;
+
+            .card_column {
+                .column_header {
+                    display: flex;
+                    align-items: center;
+                    gap: 1.5rem;
+                    margin-bottom: 2.5rem;
+
+                    .icon {
+                        font-size: 3.5rem;
+                        color: #FFD700;
+                    }
+
+                    h2 {
+                        font-size: 3.2rem;
+                        color: #FFD700;
+                    }
+                }
+
+                .info_card {
+                    background: #2a2a2a;
+                    padding: 2.5rem;
+                    border-radius: 15px;
+                    margin-bottom: 2.5rem;
+                    border-left: 4px solid #FFD700;
+                    transition: transform 0.3s ease;
+
+                    &:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+                    }
+
+                    h3 {
+                        font-size: 2.3rem;
+                        color: #FFE87C;
+                        margin-bottom: 1.2rem;
+                    }
+
+                    .subtitle {
+                        font-size: 2rem;
+                        color: #FFD700;
+                        margin-bottom: 0.8rem;
+                    }
+
+                    .year {
+                        font-size: 1.8rem;
+                        color: #FFE87C;
+                        opacity: 0.8;
+                        margin-bottom: 1.8rem;
+                    }
+
+                    ul {
+                        list-style-type: none;
+                        padding-left: 0;
+
+                        li {
+                            color: #FFE87C;
+                            font-size: 1.6rem;
+                            margin-bottom: 1rem;
+                            padding-left: 2rem;
+                            position: relative;
+                            line-height: 1.6;
+
+                            &::before {
+                                content: "•";
+                                color: #FFD700;
+                                position: absolute;
+                                left: 0;
+                                font-size: 1.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 2rem 1rem;
+
+        &_content {
+            h1 {
+                font-size: 4rem;
+            }
+
+            &_text {
+                font-size: 1.8rem;
+                margin-bottom: 3rem;
+            }
+
+            &_cards {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+
+                .card_column {
+                    .column_header {
+                        justify-content: center;
+
+                        .icon {
+                            font-size: 3rem;
+                        }
+
+                        h2 {
+                            font-size: 3rem;
+                        }
+                    }
+
+                    .info_card {
+                        h3 {
+                            font-size: 2.2rem;
+                        }
+
+                        .subtitle {
+                            font-size: 1.8rem;
+                        }
+
+                        .year {
+                            font-size: 1.6rem;
+                        }
+
+                        ul li {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

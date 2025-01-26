@@ -1,0 +1,142 @@
+.portfolio {
+    padding: 4rem 2rem;
+    background-color: #1a1a1a;
+    min-height: 100vh;
+
+    h1 {
+        font-size: 3.5rem;
+        color: #FFD700;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    &_content {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        &_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+
+            &_item {
+                background: #2a2a2a;
+                border-radius: 15px;
+                overflow: hidden;
+                transition: transform 0.3s ease;
+                
+                &:hover {
+                    transform: translateY(-10px);
+
+                    .overlay {
+                        opacity: 1;
+                    }
+                }
+
+                &_image {
+                    position: relative;
+                    height: 200px;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                    .overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: rgba(0, 0, 0, 0.8);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+
+                        &_buttons {
+                            display: flex;
+                            gap: 1rem;
+
+                            a {
+                                padding: 0.8rem 1.5rem;
+                                background: #FFD700;
+                                color: #000;
+                                text-decoration: none;
+                                border-radius: 5px;
+                                font-size: 1.1rem;
+                                font-weight: bold;
+                                transition: all 0.3s ease;
+
+                                &:hover {
+                                    background: #FFFF00;
+                                    transform: scale(1.05);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &_content {
+                    padding: 1.5rem;
+
+                    h3 {
+                        font-size: 1.8rem;
+                        color: #FFD700;
+                        margin-bottom: 1rem;
+                    }
+
+                    p {
+                        font-size: 1.2rem;
+                        color: #FFE87C;
+                        margin-bottom: 1.5rem;
+                        line-height: 1.6;
+                    }
+
+                    .technologies {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 0.8rem;
+
+                        .tech-tag {
+                            padding: 0.5rem 1rem;
+                            background: #333;
+                            color: #FFD700;
+                            border-radius: 20px;
+                            font-size: 0.9rem;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio {
+        h1 {
+            font-size: 2.8rem;
+        }
+
+        &_content_grid {
+            grid-template-columns: 1fr;
+
+            &_item {
+                &_content {
+                    h3 {
+                        font-size: 1.5rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+.home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2rem;
+
+    &_text_wrapper {
+        text-align: center;
+        
+        h1 {
+            font-size: 6.5rem;
+            margin-bottom: 1.5rem;
+            color: #ffdd40;
+            
+            .text-highlight {
+                color: #ffdd40;
+                font-size: 5.8rem;
+            }
+        }
+    }
+
+    &_description {
+        font-size: 1.8rem;
+        color: #FFE87C;
+        max-width: 800px;
+        margin: 2rem auto;
+        line-height: 1.8;
+    }
+
+    &_socials {
+        margin: 2rem 0;
+        
+        a {
+            margin: 0 1rem;
+            color: #333;
+            transition: color 0.3s ease;
+            
+            &:hover {
+                color: #007bff;
+            }
+        }
+    }
+
+    &_buttons {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        
+        button {
+            padding: 1rem 2.5rem;
+            border-radius: 5px;
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            
+            &.primary-btn {
+                background: #007bff;
+                color: white;
+                border: none;
+                
+                &:hover {
+                    background: #0056b3;
+                }
+            }
+            
+            &.secondary-btn {
+                background: transparent;
+                border: 2px solid #007bff;
+                color: #007bff;
+                
+                &:hover {
+                    background: #007bff;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        h1 {
+            font-size: 2.8rem;
+            
+            .text-highlight {
+                font-size: 3rem;
+            }
+        }
+        
+        &_description {
+            font-size: 1.4rem;
+        }
+        
+        &_buttons {
+            button {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+  
